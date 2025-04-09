@@ -23,7 +23,7 @@ mongoose.connect(process.env.MONGODB_URL)
 .then(()=>{
     console.log("Mongodb connected");
     app.listen(process.env.PORT,()=>{
-        console.log(`http://localhost:${process.env.PORT||4444}`);
+        console.log(`http://localhost:${process.env.PORT||3000}`);
     })
 }).catch((err)=>{
     console.log(err.message);
