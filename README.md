@@ -41,9 +41,11 @@ protected to ensure only authenticated users can access them.
 
  - **Set Up Environment Variables:**
   Create a .env file in the root directory. Add the following variables:
-MONGODB_URI=your_mongodb_atlas_connection_string
-JWT_SECRET=your_jwt_secret_key 
-PORT=5000
+  ```shell
+  MONGODB_URI=your_mongodb_atlas_connection_string
+  JWT_SECRET=your_jwt_secret_key 
+  PORT=5000
+```
 
  - **Run the Application:** 
  The server will start on http://localhost:5000
@@ -57,18 +59,23 @@ https://cactro-test-9april.onrender.com Provide a Postman Collection
 Link A Postman collection is not hosted publicly yet. However, you can
 import the following example requests into Postman: 
 
- - Signup: POST https://cactro-test-9april.onrender.com/signup 
- - Login: POST https://cactro-test-9april.onrender.com/login 
- - Add Task: POST https://cactro-test-9april.onrender.com/addtask 
- - Get Tasks: GET https://cactro-test-9april.onrender.com/gettasks
- - Update Task: PUT https://cactro-test-9april.onrender.com/updatetask/:id 
- - Delete Task:DELETE https://cactro-test-9april.onrender.com/deletetask/:id Include
+|  Task | Type_of_Req  | URL  |
+| ------------ | ------------ | ------------ |
+| Signup  | POST  |  https://cactro-test-9april.onrender.com/signup  |
+| Login  | POST   | https://cactro-test-9april.onrender.com/login   |
+|  Add Task |  POST |  https://cactro-test-9april.onrender.com/addtask  |
+|  Get Tasks |GET    |  https://cactro-test-9april.onrender.com/gettasks  |
+|   Update Task| PUT  |https://cactro-test-9april.onrender.com/updatetask/:id    |
+| Delete Task  | DELETE   |  https://cactro-test-9april.onrender.com/deletetask/:id |
+
+
 
 All API Endpoints with Example Requests and Responses 
 Below are the API endpoints with example requests and responses. The collection to read or list all tasks (e.g., /gettasks) should include a sample authorization header to check.
 
 ***1.Signup a User Method:*** POST URL: /signup Request Body:
 
+```shell
  { 
  "username": "testuser", 
  "password": "password123" 
@@ -77,24 +84,26 @@ Below are the API endpoints with example requests and responses. The collection 
 Response (200): { "msg": "User registered successfully" }
 Response (400): If username or password is missing.
 
+```
   
 
 **2.Login a User Method**: POST URL: /login Request Body: 
+
+```shell
 { 
 "username":"testuser",
  "password": "password123"
   }
-
-  
-
 Response (200): { "token": "your_jwt_token_here" } 
-Response (400): Ifcredentials are incorrect.
+Response (400): If credentials are incorrect.
+```
 
   
 
 **3.Add a Task Method**: POST URL: /addtask 
 Headers: Authorization: Bearer
 `<your_jwt_token>`{=html} Request Body:
+```shell
  { 
  "title": "Complete project",
 "description": "Finish the task management API" 
@@ -102,7 +111,7 @@ Headers: Authorization: Bearer
 
  Response (201) :-
  { 
- "\_id": "task_id",
+ "_id": "task_id",
   "title": "Complete project",
 "description": "Finish the task management API", 
 "status": "pending",
@@ -112,11 +121,13 @@ Headers: Authorization: Bearer
 "2025-04-09T10:00:00Z"
  }
   Response (401): -If not authorized.
+```
 
   
 
 **4.Get All Tasks Method**: GET URL: /gettasks 
 Headers: Authorization:Bearer `<your_jwt_token>`{=html} 
+```shell
 Response (200):
 \[ 
 { 
@@ -130,16 +141,18 @@ Response (200):
    }\
    ]
 
+```
   
 Response (401): If not authorized.
 
  **5.Update a Task Method**: PUT URL:/updatetask/:id
   Headers: Authorization: Bearer `<your_jwt_token>`{=html}
 Request Body
+```shell
 { "status": "in-progress" } Response (200):
 
   { 
-  "\_id": "task_id",
+  "_id": "task_id",
    "title": "Complete project",
     "description": "Finish the task management API",
      "status": "in-progress", 
@@ -149,13 +162,16 @@ Request Body
 }
  Response (404): If task not found. 
  Response (401): If not authorized.
+```
 
   
 **6.Delete a Task Method**: DELETE URL: /deletetask/:id 
 Headers:Authorization: Bearer `<your_jwt_token>`{=html} 
+```shell
 Response (200):{ "msg": "Task removed" }
 Response (404): If task not found. 
 Response (401): If not authorized.
+```
 
   
 **Deployment Details Platform:** 
