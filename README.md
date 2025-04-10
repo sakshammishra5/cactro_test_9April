@@ -56,7 +56,7 @@ protected to ensure only authenticated users can access them.
 
 ***Details of the Deployed API (Base URL) Live Base URL:***
 https://cactro-test-9april.onrender.com Provide a Postman Collection
-Link [Postman collection Link](https://www.postman.com/cnc-team-9361/cactro-fullstack/collection/4bx354o/cactro-fullstack?action=share&creator=42672201&active-environment=36377152-4c1145ba-1e8d-406a-bf5e-90b1f3a7cae3). 
+Link [Postman collection Link](https://www.postman.com/cnc-team-9361/cactro-fullstack/collection/4bx354o/cactro-fullstack?action=share&creator=42672201&active-environment=42672201-ef422d27-3cb8-48e1-8d88-f63e2cd6993f). 
 
 Documentation of postManApi:-https://documenter.getpostman.com/view/42672201/2sB2cX9geQ
 
