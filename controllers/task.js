@@ -46,9 +46,10 @@ exports.updateTask = async (req, res) => {
         if (!task) {
             return res.status(404).json({ msg: "Task not found" });
         }
-        task.title = title;
-        task.description = description;
-        task.status = status;
+        // Update task fields
+        task.title = title || task.title;
+        task.description = description || task.description;
+        task.status = status || task.status;
         await task.save();
         res.status(200).json(task);
     } catch (err) {
