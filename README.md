@@ -56,7 +56,11 @@ protected to ensure only authenticated users can access them.
 
 ***Details of the Deployed API (Base URL) Live Base URL:***
 https://cactro-test-9april.onrender.com Provide a Postman Collection
-Link [Postman collection Link](https://cnc-team-9361.postman.co/workspace/CNC-team-Workspace~a43f9e30-871d-4f2f-8ddf-9b000ee7c824/collection/42672201-cfee7220-ea54-493a-bbbd-ede1b126adb8?action=share&creator=42672201&active-environment=36377152-4c1145ba-1e8d-406a-bf5e-90b1f3a7cae3). However, you can
+Link [Postman collection Link](https://cnc-team-9361.postman.co/workspace/CNC-team-Workspace~a43f9e30-871d-4f2f-8ddf-9b000ee7c824/collection/42672201-cfee7220-ea54-493a-bbbd-ede1b126adb8?action=share&creator=42672201&active-environment=36377152-4c1145ba-1e8d-406a-bf5e-90b1f3a7cae3). 
+
+Documentation of postManApi:-https://documenter.getpostman.com/view/42672201/2sB2cX9geQ
+
+However, you can
 import the following example requests into Postman: 
 
 |  Task | Type_of_Req  | URL  |
